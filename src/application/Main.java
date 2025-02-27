@@ -19,8 +19,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
 public class Main extends Application {
+	
 	@Override
 	public void start(Stage primaryStage) {
+		
 		primaryStage.setTitle("Fibonacci & Expense Tracker");
 
 		// Fibonacci UI (unchanged)
@@ -156,8 +158,10 @@ public class Main extends Application {
 				descLabel, descInput, addExpense, expenseTable);
 
 		Scene scene = new Scene(layout, 600, 600);
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm()); // Add CSS
 		primaryStage.setScene(scene);
 		primaryStage.show();
+
 	}
 
 	// Fetch expenses (unchanged)
@@ -221,8 +225,11 @@ public class Main extends Application {
 		editStage.setScene(new Scene(editLayout, 300, 250));
 		editStage.show();
 	}
+	
 
 	public static void main(String[] args) {
+		
 		launch(args);
 	}
+	
 }
